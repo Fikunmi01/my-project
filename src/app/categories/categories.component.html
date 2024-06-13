@@ -1,0 +1,19 @@
+<div class="px-24 py-10">
+    <h1 class="text-4xl pb-2 font-sans">Categories</h1>
+    <p class="font-serif text-xl text-[#50514F] mb-4">Explore fascinating interests</p>
+
+    <div class="grid grid-cols-3 gap-x-4">
+        <div *ngFor="let interest of categoryArray" class="rounded-xl bg-[#FDFFF7] shadow-xl">
+            <img [src]="interest.imgSrc" class="mb-2 rounded-xl" alt="">
+            <div class="p-3">
+                <h3 class="font-serif mb-2 text-xl">{{interest.title}}</h3>
+                <p class="text-base pb-4 font-sans">{{interest.description}}</p>
+
+                <div class="mb-4 flex justify-between">
+                    <p>{{interest.author}}</p>
+                    <button>Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
