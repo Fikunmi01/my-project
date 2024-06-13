@@ -1,8 +1,8 @@
-<div class="px-24 py-10">
+<div class="px-2 md:px-24 py-10">
     <h1 class="text-4xl pb-2 font-sans">Categories</h1>
     <p class="font-serif text-xl text-[#50514F] mb-4">Explore fascinating interests</p>
 
-    <div class="grid grid-cols-3 gap-x-4">
+    <div class="flex flex-col gap-6 md:grid md:grid-cols-3 md:gap-x-4">
         <div *ngFor="let interest of categoryArray" class="rounded-xl bg-[#FDFFF7] shadow-xl">
             <img [src]="interest.imgSrc" class="mb-2 rounded-xl" alt="">
             <div class="p-3">

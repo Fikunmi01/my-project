@@ -1,9 +1,28 @@
-<div class="flex items-center justify-center p-2">
-    <img src="" alt="">
+<div class="flex flex-row items-center shadow-2xl md:shadow-none justify-between md:justify-center p-2">
     <h3 class="font-serif text-2xl">Xircle</h3>
+    <i class="uil text-2xl uil-bars md:hidden" *ngIf="mobileMenuActive" (click)="toggleMobileMenu()"></i>
+    <i class="uil text-2xl md:hidden uil-multiply" *ngIf="!mobileMenuActive" (click)="toggleMobileMenu()"></i>
+
 </div>
 
-<div class="flex shadow-2xl bg-[#B4ADEA] w-full text-[#50514F] items-center p-6 justify-center relative border-2 ">
+<div class="p-2 flex justify-center text-center relative bg-[#B4ADEA] h-screen" *ngIf="!mobileMenuActive">
+    <ul class="mt-10 flex gap-y-10 flex-col">
+        <li>Saves</li>
+        <li>Discover</li>
+        <li>Collections</li>
+        <div class="right-0 pr-4 flex gap-x-4 ">
+            <button class="border-2 border-solid text-[#50514F] bg-[#FDFFF7] px-3 rounded-lg p-1 border-[#50514f]">
+                Log in
+            </button>
+            <button class="border-2 border-solid border-[#50514F] text-[#FDFFF7] px-3 rounded-lg p-1 bg-[#50514f]">
+                Sign up
+            </button>
+        </div>
+    </ul>
+</div>
+
+<div
+    class="hidden md:flex shadow-2xl bg-[#B4ADEA] w-full text-[#50514F] items-center p-6 justify-center relative border-2 ">
 
     <div class="flex">
         <div class="">
